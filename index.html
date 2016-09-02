@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Travel Guide</title>
+      <link rel="stylesheet" href="css/style.css" charset="utf-8">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+  </head>
+  <body>
+    <center>
+    <h3>Travel Guide</h3>
+      <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input id="city" type="search" required placeholder="Pequisar cidade">
+          <label for="search"><i class="material-icons">search</i></label>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div  id="img"></div>
+  <div id="error"></div>
+  <button  class="btn btn-primary" id="btnpesquisa">Pesquisar</button>
+</center>
+
+
+  <div id="info" class="col-md-6">
+  </div>
+  <div id="map" class="col-md-6"></div>
+
+
+  </body>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLRMfAqPBPPlnIL183g4cYNoXLXoQTH2k&callback=initMap&libraries=drawing"
+  async defer></script>
+  <script src="js/script.js" ></script>
+</html>
