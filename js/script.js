@@ -1,3 +1,4 @@
+  //Guardando e selecionando os respectivos ids
   var city = document.querySelector('#city');
   var btnPesquisa = document.querySelector('#btnpesquisa');
   var info = document.querySelector('#info');
@@ -5,8 +6,8 @@
 
 
 
-
-  btnPesquisa.addEventListener('click', function(){
+  //Criando evnto para o botão e a chamada da api Weather que retorna um JSON 
+  btnPesquisa.addEventListener('click', () => {
     var regex = /\D/g;
     getWeather({
       url: `http://api.openweathermap.org/data/2.5/weather?q=${city.value},uk&appid=3ba7fda56619fd7372f2e655dda1bc73&lang=pt&units=metric`,
@@ -28,7 +29,7 @@
   }, false);
 
 
-
+  //Função que pega os valores que o JSON retorna
   function exibeInfo(Clima){
     info.innerHTML = '';
     info.innerHTML += `<h4>${Clima.name}</h4>`;
@@ -44,13 +45,14 @@
     info.innerHTML += `<p>Temperatura Mínima: <b>${Clima.main.temp_min}</b></p>`;
      initMap(Clima);
   }
-
+  
+  //Função que chama a api maps google
   function initMap(Clima) {
     map = new google.maps.Map(document.getElementById('map'), {
       center: {lat:  Clima.coord.lat, lng: Clima.coord.lon},
       zoom: 8
     });
-
+    // Biblioteca da api maps google (Drawing)
     var drawingManager = new google.maps.drawing.DrawingManager({
       drawingMode: google.maps.drawing.OverlayType.MARKER,
       drawingControl: true,
