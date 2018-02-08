@@ -17,5 +17,3 @@ Ao pesquisar uma cidade, ou seja, digitando seu nome na barra (input) de pesquis
     Temperatura Mínima;
     
 Além de dessas informações irá aparecer também a localização da cidade no mapa (GOOGLE MAPS), onde o usuário poderá fazer desenhos no mapa (traçar rotas, fazer circulos, quadrados e etc). 
-
-Projeto desenvolvido por: Renan Mendes
